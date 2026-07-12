@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="600" viewBox="0 0 800 600">
+<defs><linearGradient id="g" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#4a3016"/><stop offset="1" stop-color="#2a190d"/></linearGradient></defs>
+<rect width="800" height="600" fill="url(#g)"/>
+<path d="M250 380l150-110 150 110v130H250z" fill="#c8925a" fill-opacity="0.25" stroke="#e6b878" stroke-opacity="0.5" stroke-width="5"/>
+<path d="M230 390l170-125 170 125" fill="none" stroke="#e6b878" stroke-opacity="0.6" stroke-width="6" stroke-linecap="round"/>
+<text x="400" y="560" fill="#f3e7d4" font-family="Open Sans,sans-serif" font-size="22" font-weight="700" text-anchor="middle">Баня из кедра</text>
+</svg>

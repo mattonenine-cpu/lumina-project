@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="600" viewBox="0 0 800 600">
+<defs><linearGradient id="g" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#4a3016"/><stop offset="1" stop-color="#2a190d"/></linearGradient></defs>
+<rect width="800" height="600" fill="url(#g)"/>
+<rect x="270" y="330" width="260" height="150" rx="16" fill="#c8925a" fill-opacity="0.22" stroke="#e6b878" stroke-opacity="0.5" stroke-width="5"/>
+<g fill="none" stroke="#e6b878" stroke-opacity="0.5" stroke-width="5" stroke-linecap="round"><path d="M300 405q30 -18 60 0t60 0 60 0"/></g>
+<text x="400" y="540" fill="#f3e7d4" font-family="Open Sans,sans-serif" font-size="22" font-weight="700" text-anchor="middle">SPA-зона</text>
+</svg>

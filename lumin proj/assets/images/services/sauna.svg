@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="600" viewBox="0 0 800 600">
+<defs><linearGradient id="g" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#3a2414"/><stop offset="1" stop-color="#25160c"/></linearGradient></defs>
+<rect width="800" height="600" fill="url(#g)"/>
+<g fill="none" stroke="#e6b878" stroke-opacity="0.5" stroke-width="6" stroke-linecap="round">
+<path d="M370 260c0 35-26 48-26 83s26 48 26 83"/><path d="M430 260c0 35-26 48-26 83s26 48 26 83"/></g>
+<rect x="300" y="450" width="200" height="16" rx="8" fill="#8a6236" fill-opacity="0.8"/>
+<rect x="300" y="480" width="200" height="16" rx="8" fill="#8a6236" fill-opacity="0.6"/>
+<text x="400" y="545" fill="#f3e7d4" font-family="Open Sans,sans-serif" font-size="26" font-weight="700" text-anchor="middle">Финская сауна</text>
+</svg>

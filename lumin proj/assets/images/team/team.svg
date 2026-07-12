@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="640" viewBox="0 0 800 640">
+<defs><linearGradient id="g" x1="0" y1="0" x2="0.3" y2="1"><stop offset="0" stop-color="#c8925a"/><stop offset="1" stop-color="#6b4226"/></linearGradient></defs>
+<rect width="800" height="640" fill="url(#g)"/>
+<g fill="#25160c" fill-opacity="0.16"><circle cx="320" cy="300" r="70"/><circle cx="480" cy="300" r="70"/><rect x="250" y="380" width="140" height="150" rx="30"/><rect x="410" y="380" width="140" height="150" rx="30"/></g>
+<text x="400" y="600" fill="#fff7ec" font-family="Open Sans,sans-serif" font-size="26" font-weight="700" text-anchor="middle">Команда LUMMINA</text>
+</svg>

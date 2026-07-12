@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="600" viewBox="0 0 800 600">
+<defs><linearGradient id="g" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#3a2414"/><stop offset="1" stop-color="#25160c"/></linearGradient></defs>
+<rect width="800" height="600" fill="url(#g)"/>
+<g fill="none" stroke="#e6b878" stroke-opacity="0.5" stroke-width="6" stroke-linecap="round">
+<path d="M360 250c0 40-30 55-30 95s30 55 30 95"/><path d="M410 235c0 45-34 62-34 108s34 62 34 108"/><path d="M460 250c0 40-30 55-30 95s30 55 30 95"/></g>
+<rect x="250" y="470" width="300" height="14" rx="7" fill="#c06a2c" fill-opacity="0.7"/>
+<text x="400" y="540" fill="#f3e7d4" font-family="Open Sans,sans-serif" font-size="26" font-weight="700" text-anchor="middle">Русская баня</text>
+</svg>

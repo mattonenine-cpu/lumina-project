@@ -1,0 +1,601 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LUMMINA — бани, сауны и хаммамы, которые строим как для себя</title>
+<meta name="description" content="LUMMINA — строим бани, сауны, хаммамы и SPA-зоны своими руками. Живой пар, честное дерево, работа под ключ и без субподрядчиков.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="overlay" id="overlay"></div>
+
+<!-- ===================== HEADER ===================== -->
+<header class="header" id="header">
+  <div class="container header__inner">
+    <a href="#top" class="logo"><span class="logo__mark"></span>LUMM<span class="logo__accent">INA</span></a>
+
+    <nav class="nav" id="nav">
+      <a href="#services">Что строим</a>
+      <a href="#about">О нас</a>
+      <a href="#projects">Работы</a>
+      <a href="#process">Как идёт стройка</a>
+      <a href="#reviews">Отзывы</a>
+      <a href="#faq">Вопросы</a>
+      <a href="#contacts">Контакты</a>
+    </nav>
+
+    <button class="btn btn--primary btn--sm js-open-modal" data-form="Заявка из шапки">Обсудить сауну</button>
+
+    <button class="burger" id="burger" aria-label="Открыть меню">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+
+  <nav class="mobile-nav" id="mobileNav">
+    <a href="#services">Что строим</a>
+    <a href="#about">О нас</a>
+    <a href="#projects">Работы</a>
+    <a href="#process">Как идёт стройка</a>
+    <a href="#reviews">Отзывы</a>
+    <a href="#faq">Вопросы</a>
+    <a href="#contacts">Контакты</a>
+    <button class="btn btn--primary js-open-modal" data-form="Заявка из мобильного меню">Обсудить сауну</button>
+  </nav>
+</header>
+
+<!-- ===================== БОКОВАЯ НАВИГАЦИЯ (точки) ===================== -->
+<div class="heat-gauge" id="heatGauge" aria-hidden="true">
+  <div class="heat-gauge__plaque">
+    <div class="heat-gauge__scale">
+      <span>110°</span><span>80°</span><span>50°</span>
+    </div>
+    <div class="heat-gauge__col">
+      <div class="heat-gauge__tube">
+        <div class="heat-gauge__fill" id="heatFill"></div>
+      </div>
+      <div class="heat-gauge__bulb" id="heatBulb"></div>
+    </div>
+  </div>
+</div>
+
+<nav class="side-dots" id="sideDots">
+  <span class="side-dots__item" data-target="top">
+    <button class="side-dots__dot" aria-label="Главный экран"></button>
+    <span class="side-dots__label">Главный экран</span>
+  </span>
+  <span class="side-dots__item" data-target="services">
+    <button class="side-dots__dot" aria-label="Что строим"></button>
+    <span class="side-dots__label">Что строим</span>
+  </span>
+  <span class="side-dots__item" data-target="about">
+    <button class="side-dots__dot" aria-label="О нас"></button>
+    <span class="side-dots__label">О нас</span>
+  </span>
+  <span class="side-dots__item" data-target="projects">
+    <button class="side-dots__dot" aria-label="Работы"></button>
+    <span class="side-dots__label">Работы</span>
+  </span>
+  <span class="side-dots__item" data-target="process">
+    <button class="side-dots__dot" aria-label="Как идёт стройка"></button>
+    <span class="side-dots__label">Как идёт стройка</span>
+  </span>
+  <span class="side-dots__item" data-target="reviews">
+    <button class="side-dots__dot" aria-label="Отзывы"></button>
+    <span class="side-dots__label">Отзывы</span>
+  </span>
+  <span class="side-dots__item" data-target="faq">
+    <button class="side-dots__dot" aria-label="Вопросы"></button>
+    <span class="side-dots__label">Вопросы</span>
+  </span>
+  <span class="side-dots__item" data-target="contacts">
+    <button class="side-dots__dot" aria-label="Контакты"></button>
+    <span class="side-dots__label">Контакты</span>
+  </span>
+</nav>
+
+<main id="top">
+
+  <!-- ===================== HERO — full-screen photo ===================== -->
+  <section class="hero">
+    <img class="hero__bg-photo" src="assets/images/hero-bg.jpg" alt="">
+    <div class="hero__overlay"></div>
+    <div class="hero__float hero__float--1" aria-hidden="true"></div>
+    <div class="hero__float hero__float--2" aria-hidden="true"></div>
+    <div class="hero__steam" id="heroSteam" aria-hidden="true">
+      <div class="steam-mass"></div>
+    </div>
+    <div class="hero__body">
+      <span class="hero__badge reveal" data-delay="1">Более 10 лет опыта · 100+ готовых саун · Санкт-Петербург и область</span>
+      <h1 class="hero__title">
+        <span class="reveal" data-delay="2">Сауна, из которой</span><br>
+        <span class="reveal" data-delay="3">не хочется <span class="hero__em">выходить</span></span>
+      </h1>
+      <p class="hero__subtitle reveal" data-delay="4">
+        Собираем бани, сауны и хаммамы своими руками — от первого наброска на салфетке
+        до первого пара. Без субподряда, без «как получится» и без сюрпризов в смете.
+      </p>
+      <div class="hero__actions">
+        <button class="btn btn--primary btn--lg btn--pulse btn--magnetic reveal js-open-modal" data-delay="5" data-form="Расчёт из hero">Сколько будет стоить</button>
+        <button class="btn btn--ghost btn--lg btn--magnetic reveal js-open-modal" data-delay="6" data-form="Консультация из hero">Просто задать вопрос</button>
+      </div>
+    </div>
+    <div class="hero__scroll-hint" aria-hidden="true"></div>
+  </section>
+
+  <!-- ===================== УСЛУГИ ===================== -->
+  <section id="services" class="services section">
+    <div class="container">
+      <span class="section__kicker reveal">Что строим</span>
+      <h2 class="section__title reveal">Четыре вещи, которые мы умеем делать хорошо</h2>
+      <div class="rule reveal"></div>
+      <p class="section__lead reveal">Не берёмся за всё подряд. Зато то, что делаем — делаем от проекта
+        до последней полки своими руками.</p>
+
+      <div class="grid-4 stagger">
+        <div class="card card--service reveal">
+          <img src="assets/images/services/bath.svg" alt="Русская баня" loading="lazy">
+          <div class="card__body">
+            <h3>Русская баня</h3>
+            <p>Та самая — с настоящим паром, полком из липы и печью, которая держит жар весь вечер.</p>
+          </div>
+        </div>
+        <div class="card card--service reveal">
+          <img src="assets/images/services/sauna.svg" alt="Финская сауна" loading="lazy">
+          <div class="card__body">
+            <h3>Финская сауна</h3>
+            <p>Сухой лёгкий жар и аккуратное дерево без лишнего. Ставим и в доме, и на участке.</p>
+          </div>
+        </div>
+        <div class="card card--service reveal">
+          <img src="assets/images/services/hammam.svg" alt="Хаммам" loading="lazy">
+          <div class="card__body">
+            <h3>Хаммам</h3>
+            <p>Тёплый камень, мягкий пар и тишина. Считаем каждый градус, чтобы не было ни капли конденсата.</p>
+          </div>
+        </div>
+        <div class="card card--service reveal">
+          <img src="assets/images/services/spa.svg" alt="SPA-зона" loading="lazy">
+          <div class="card__body">
+            <h3>SPA-зона</h3>
+            <p>Купель, бассейн, комната отдыха. Собираем цельное пространство, а не набор процедур.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== О КОМПАНИИ ===================== -->
+  <section id="about" class="about section">
+    <div class="container grid-2">
+      <div class="reveal">
+        <span class="section__kicker">О нас</span>
+        <h2 class="section__title">О компании</h2>
+        <div class="rule"></div>
+        <p class="placeholder-text">Больше 10 лет строим бани, сауны и хаммамы в Петербурге и области.
+          За это время сдали свыше 100 объектов — от компактной сауны на дачном участке
+          до больших SPA-комплексов с бассейном. Строим сами, без субподряда, и держим
+          слово по срокам и смете.</p>
+        <button class="btn btn--primary js-open-modal" data-form="Заявка из блока О нас">Познакомиться поближе</button>
+      </div>
+      <div class="about__image reveal">
+        <img src="assets/images/team/team.svg" alt="Команда LUMMINA на объекте" loading="lazy">
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== ЦИФРЫ — diagonal cobalt band ===================== -->
+  <section class="numbers section">
+    <div class="container grid-4 stagger">
+      <div class="number reveal">
+        <span class="number__value" data-count="10">0</span><span class="number__suffix">+</span>
+        <p>лет на рынке</p>
+      </div>
+      <div class="number reveal">
+        <span class="number__value" data-count="100">0</span><span class="number__suffix">+</span>
+        <p>готовых объектов</p>
+      </div>
+      <div class="number reveal">
+        <span class="number__value" data-count="96">0</span><span class="number__suffix">%</span>
+        <p>клиентов рекомендуют нас</p>
+      </div>
+      <div class="number reveal">
+        <span class="number__value" data-count="5">0</span><span class="number__suffix">+</span>
+        <p>лет гарантии</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== ПРЕИМУЩЕСТВА ===================== -->
+  <section class="advantages section">
+    <div class="container">
+      <span class="section__kicker reveal">Почему с нами спокойно</span>
+      <h2 class="section__title reveal">Шесть причин не искать дальше</h2>
+      <div class="rule reveal"></div>
+      <div class="grid-3 stagger">
+        <div class="card card--adv reveal">
+          <img class="card__icon" src="assets/icons/project.svg" alt="">
+          <h3>Проект под ваш участок</h3>
+          <p>Не подгоняем типовую коробку. Смотрим на землю, солнце и то, как вы хотите
+            заходить в сауну зимой.</p>
+        </div>
+        <div class="card card--adv reveal">
+          <img class="card__icon" src="assets/icons/materials.svg" alt="">
+          <h3>Дерево, которое не стыдно трогать</h3>
+          <p>Липа на полки, кедр там, где он к месту, честный камень. Показываем материал
+            до того, как он ляжет в стену.</p>
+        </div>
+        <div class="card card--adv reveal">
+          <img class="card__icon" src="assets/icons/team.svg" alt="">
+          <h3>Свои руки, а не субподряд</h3>
+          <p>Строит наша бригада — те же люди, что были на замере. Никаких «а это не мы,
+            это подрядчики».</p>
+        </div>
+        <div class="card card--adv reveal">
+          <img class="card__icon" src="assets/icons/warranty.svg" alt="">
+          <h3>Гарантия, к которой можно вернуться</h3>
+          <p>До 5 лет на конструктив и пар. Если что-то заскрипело — звоните, разберёмся,
+            это часть работы.</p>
+        </div>
+        <div class="card card--adv reveal">
+          <img class="card__icon" src="assets/icons/timeline.svg" alt="">
+          <h3>Сроки, а не «ну примерно к осени»</h3>
+          <p>Дату сдачи пишем в договор и держим. Есть своё производство — не зависим
+            от чужих заводов.</p>
+        </div>
+        <div class="card card--adv reveal">
+          <img class="card__icon" src="assets/icons/support.svg" alt="">
+          <h3>Один человек на связи</h3>
+          <p>Не переключаем между отделами. От первого эскиза до первого пара с вами
+            общается один менеджер.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== MARQUEE BAND ===================== -->
+  <div class="marquee-band" aria-hidden="true">
+    <div class="marquee-track" id="marqueeTrack">
+      <span class="marquee-inner">КАТАЛОГ<span class="marquee-sep">·</span>РАБОТЫ<span class="marquee-sep">·</span>ПРОЕКТЫ<span class="marquee-sep">·</span>БАНИ<span class="marquee-sep">·</span>САУНЫ<span class="marquee-sep">·</span>ХАММАМЫ<span class="marquee-sep">·</span></span>
+      <span class="marquee-inner">КАТАЛОГ<span class="marquee-sep">·</span>РАБОТЫ<span class="marquee-sep">·</span>ПРОЕКТЫ<span class="marquee-sep">·</span>БАНИ<span class="marquee-sep">·</span>САУНЫ<span class="marquee-sep">·</span>ХАММАМЫ<span class="marquee-sep">·</span></span>
+      <span class="marquee-inner">КАТАЛОГ<span class="marquee-sep">·</span>РАБОТЫ<span class="marquee-sep">·</span>ПРОЕКТЫ<span class="marquee-sep">·</span>БАНИ<span class="marquee-sep">·</span>САУНЫ<span class="marquee-sep">·</span>ХАММАМЫ<span class="marquee-sep">·</span></span>
+      <span class="marquee-inner">КАТАЛОГ<span class="marquee-sep">·</span>РАБОТЫ<span class="marquee-sep">·</span>ПРОЕКТЫ<span class="marquee-sep">·</span>БАНИ<span class="marquee-sep">·</span>САУНЫ<span class="marquee-sep">·</span>ХАММАМЫ<span class="marquee-sep">·</span></span>
+    </div>
+  </div>
+
+  <!-- ===================== НАШИ ПРОЕКТЫ — asymmetric grid ===================== -->
+  <section id="projects" class="projects section">
+    <div class="container">
+      <span class="section__kicker reveal">Работы</span>
+      <h2 class="section__title reveal">Несколько саун, которые уже топят</h2>
+      <div class="rule reveal"></div>
+      <p class="section__lead reveal">Фотографии заменим на реальные объекты — а истории за ними настоящие.</p>
+
+      <div class="projects__grid stagger">
+        <a href="#" class="card card--project card--project-hero reveal">
+          <div class="card__media"><img src="assets/images/projects/project-1.svg" alt="Сауна из кедра" loading="lazy"></div>
+          <div class="card__body">
+            <h3>Сауна из кедра под Всеволожском</h3>
+            <span class="card__link">Как строили <i class="arrow"></i></span>
+          </div>
+        </a>
+        <a href="#" class="card card--project reveal">
+          <div class="card__media"><img src="assets/images/projects/project-2.svg" alt="Хаммам" loading="lazy"></div>
+          <div class="card__body">
+            <h3>Хаммам с тёплым мрамором в доме</h3>
+            <span class="card__link">Как строили <i class="arrow"></i></span>
+          </div>
+        </a>
+        <a href="#" class="card card--project reveal">
+          <div class="card__media"><img src="assets/images/projects/project-3.svg" alt="SPA-зона" loading="lazy"></div>
+          <div class="card__body">
+            <h3>SPA-зона с купелью и бассейном</h3>
+            <span class="card__link">Как строили <i class="arrow"></i></span>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== КАК МЫ РАБОТАЕМ — circular timeline ===================== -->
+  <section id="process" class="process section">
+    <div class="container">
+      <span class="section__kicker reveal">Как идёт стройка</span>
+      <h2 class="section__title reveal">От разговора до первого пара — четыре шага</h2>
+      <div class="rule reveal"></div>
+      <div class="steps stagger">
+        <div class="step reveal">
+          <span class="step__num">01</span>
+          <div>
+            <h3>Разговор и замер</h3>
+            <p>Приезжаем на участок, слушаем, что хотите, и честно говорим, что реально, а что нет.</p>
+          </div>
+        </div>
+        <div class="step reveal">
+          <span class="step__num">02</span>
+          <div>
+            <h3>Проект и цена</h3>
+            <p>Рисуем сауну, считаем смету до рубля и фиксируем срок. Дальше цена не «подрастает».</p>
+          </div>
+        </div>
+        <div class="step reveal">
+          <span class="step__num">03</span>
+          <div>
+            <h3>Стройка</h3>
+            <p>Строит наша бригада. Присылаем фото с объекта, чтобы вы видели процесс, а не гадали.</p>
+          </div>
+        </div>
+        <div class="step reveal">
+          <span class="step__num">04</span>
+          <div>
+            <h3>Первый пар</h3>
+            <p>Сдаём ключи, топим вместе, показываем как ухаживать. И остаёмся на связи по гарантии.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== РАССЧИТАЕМ ПРОЕКТ ===================== -->
+  <section class="calc-cta section">
+    <div class="container calc-cta__box reveal">
+      <h2>Хотите узнать, во сколько встанет ваша сауна?</h2>
+      <p>Оставьте телефон — перезвоним, зададим пару вопросов и пришлём честную вилку по цене.
+        Ни к чему не обязывает.</p>
+      <form class="form" data-form-name="Расчёт проекта">
+        <input type="hidden" name="access_key" value="3740f5f4-133e-4b80-b970-5822f0e409a3">
+        <input type="hidden" name="subject" value="LUMMINA — заявка: Расчёт проекта">
+        <input type="text" name="name" placeholder="Как к вам обращаться" required>
+        <input type="tel" name="phone" placeholder="Телефон" required>
+        <button type="submit" class="btn btn--primary btn--pulse">Узнать цену</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- ===================== ОТЗЫВЫ ===================== -->
+  <section id="reviews" class="reviews section">
+    <div class="container">
+      <span class="section__kicker reveal">Отзывы</span>
+      <h2 class="section__title reveal">Что говорят те, кто уже парится</h2>
+      <div class="rule reveal"></div>
+      <div class="grid-3 stagger">
+        <div class="card card--review reveal">
+          <div class="card--review__head">
+            <img src="assets/images/reviews/client-1.svg" alt="Игорь">
+            <div><strong>Игорь С.</strong><span>Сауна из кедра</span></div>
+          </div>
+          <p>Получилось даже лучше, чем на картинке, которую нам рисовали. По срокам не сдвинулись
+            ни на день, а пар — отдельная песня. Приходят гости и не хотят уходить.</p>
+        </div>
+        <div class="card card--review reveal">
+          <div class="card--review__head">
+            <img src="assets/images/reviews/client-2.svg" alt="Марина">
+            <div><strong>Марина В.</strong><span>Хаммам</span></div>
+          </div>
+          <p>Больше всего боялась сырости и запаха. Зря — пар мягкий, стены сухие, дышится легко.
+            Видно, что ребята реально считали, а не на глаз лепили.</p>
+        </div>
+        <div class="card card--review reveal">
+          <div class="card--review__head">
+            <img src="assets/images/reviews/client-3.svg" alt="Дмитрий">
+            <div><strong>Дмитрий К.</strong><span>SPA-зона</span></div>
+          </div>
+          <p>Делали целую зону отдыха с купелью. Понравилось, что один человек вёл весь проект
+            и не пропадал. Через год приезжали по мелочи — приехали, ничего не выпрашивая.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== FAQ ===================== -->
+  <section id="faq" class="faq section">
+    <div class="container">
+      <span class="section__kicker reveal">Вопросы</span>
+      <h2 class="section__title reveal">О чём обычно спрашивают</h2>
+      <div class="rule reveal"></div>
+      <div class="accordion">
+        <div class="accordion__item reveal">
+          <button class="accordion__head">Сколько по времени строится сауна?<span class="accordion__icon"></span></button>
+          <div class="accordion__body"><p>Обычно 2–4 месяца. Зависит от материала стен, размера и того,
+            насколько «навороченный» пар и инженерка. Точный срок назовём после замера и запишем в договор.</p></div>
+        </div>
+        <div class="accordion__item reveal">
+          <button class="accordion__head">Вы работаете только по Питеру?<span class="accordion__icon"></span></button>
+          <div class="accordion__body"><p>База у нас в Санкт-Петербурге и области, но выезжаем и дальше.
+            По другим регионам просто отдельно считаем дорогу и логистику — расскажем честно, есть ли смысл.</p></div>
+        </div>
+        <div class="accordion__item reveal">
+          <button class="accordion__head">А гарантия — это реально или на бумаге?<span class="accordion__icon"></span></button>
+          <div class="accordion__body"><p>Реально. До 5 лет на конструктив и пар. Если что-то заскрипело или
+            повело — звоните, приезжаем и чиним. Мы на этом рынке надолго, ссориться с клиентами нам невыгодно.</p></div>
+        </div>
+        <div class="accordion__item reveal">
+          <button class="accordion__head">Можно взять ваш проект и переделать под себя?<span class="accordion__icon"></span></button>
+          <div class="accordion__body"><p>Не просто можно — так и надо. Любой проект из работ мы подгоняем
+            под ваш участок, рельеф и привычки. Хотите сдвинуть окно или добавить комнату отдыха — обсудим.</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== КОНСУЛЬТАЦИЯ ===================== -->
+  <section class="consult section">
+    <div class="section__glow"></div>
+    <div class="container consult__box reveal">
+      <span class="section__kicker">Ничего не решили? Это нормально</span>
+      <h2>Давайте просто поговорим о вашей сауне</h2>
+      <p>Расскажем, что реально сделать на вашем участке и в вашем бюджете, подскажем по материалам
+        и формату. Без давления и без «оставьте предоплату сегодня».</p>
+      <button class="btn btn--primary btn--lg btn--pulse js-open-modal" data-form="Бесплатная консультация">Договориться о звонке</button>
+    </div>
+  </section>
+
+</main>
+
+<!-- ===================== КОНТАКТЫ + ФУТЕР ===================== -->
+<footer id="contacts" class="footer">
+  <svg class="footer__blueprint" viewBox="0 0 560 560" fill="none" stroke="#cdd7f8" stroke-width="1.5" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <defs>
+      <marker id="bpArrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+        <path d="M0,0 L10,5 L0,10 Z" fill="#cdd7f8" fill-opacity=".6" stroke="none"/>
+      </marker>
+    </defs>
+
+    <!-- floor -->
+    <polygon points="90,380 280,480 470,380 280,280" stroke-opacity=".8"/>
+    <line x1="90" y1="380" x2="280" y2="430" stroke-opacity=".3"/>
+    <line x1="130" y1="356" x2="320" y2="456" stroke-opacity=".3"/>
+    <line x1="170" y1="332" x2="360" y2="432" stroke-opacity=".3"/>
+    <line x1="210" y1="308" x2="400" y2="408" stroke-opacity=".3"/>
+    <line x1="250" y1="284" x2="440" y2="384" stroke-opacity=".3"/>
+
+    <!-- left wall + plank lines -->
+    <polygon points="90,380 280,280 280,80 90,180" stroke-opacity=".8"/>
+    <line x1="128" y1="160" x2="128" y2="360" stroke-opacity=".4"/>
+    <line x1="166" y1="140" x2="166" y2="340" stroke-opacity=".4"/>
+    <line x1="204" y1="120" x2="204" y2="320" stroke-opacity=".4"/>
+    <line x1="242" y1="100" x2="242" y2="300" stroke-opacity=".4"/>
+
+    <!-- right wall + plank lines -->
+    <polygon points="280,280 470,380 470,180 280,80" stroke-opacity=".8"/>
+    <line x1="318" y1="100" x2="318" y2="300" stroke-opacity=".4"/>
+    <line x1="356" y1="120" x2="356" y2="320" stroke-opacity=".4"/>
+    <line x1="394" y1="140" x2="394" y2="340" stroke-opacity=".4"/>
+    <line x1="432" y1="160" x2="432" y2="360" stroke-opacity=".4"/>
+
+    <!-- corner posts -->
+    <line x1="280" y1="280" x2="280" y2="80" stroke-opacity=".95" stroke-width="2.2"/>
+    <line x1="90" y1="180" x2="90" y2="380" stroke-opacity=".7" stroke-width="1.8"/>
+    <line x1="470" y1="180" x2="470" y2="380" stroke-opacity=".7" stroke-width="1.8"/>
+    <rect x="272" y="72" width="16" height="14" stroke-opacity=".6"/>
+
+    <!-- bench left: top face, slats, legs -->
+    <polygon points="110,350 240,420 240,450 110,380" stroke-opacity=".85"/>
+    <line x1="110" y1="360" x2="240" y2="430" stroke-opacity=".45"/>
+    <line x1="110" y1="370" x2="240" y2="440" stroke-opacity=".45"/>
+    <line x1="110" y1="350" x2="110" y2="380" stroke-opacity=".5"/>
+    <line x1="240" y1="420" x2="240" y2="450" stroke-opacity=".5"/>
+    <line x1="110" y1="380" x2="110" y2="398" stroke-opacity=".55"/>
+    <line x1="240" y1="450" x2="240" y2="468" stroke-opacity=".55"/>
+
+    <!-- bench right: top face, slats, legs -->
+    <polygon points="320,420 450,350 450,380 320,450" stroke-opacity=".85"/>
+    <line x1="320" y1="430" x2="450" y2="360" stroke-opacity=".45"/>
+    <line x1="320" y1="440" x2="450" y2="370" stroke-opacity=".45"/>
+    <line x1="450" y1="350" x2="450" y2="380" stroke-opacity=".5"/>
+    <line x1="320" y1="420" x2="320" y2="450" stroke-opacity=".5"/>
+    <line x1="450" y1="380" x2="450" y2="398" stroke-opacity=".55"/>
+    <line x1="320" y1="450" x2="320" y2="468" stroke-opacity=".55"/>
+
+    <!-- stove body + control panel -->
+    <rect x="248" y="250" width="64" height="54" stroke-opacity=".9"/>
+    <line x1="248" y1="272" x2="312" y2="272" stroke-opacity=".5"/>
+    <rect x="256" y="278" width="18" height="11" rx="2" stroke-opacity=".65"/>
+    <circle cx="292" cy="283" r="3.4" stroke-opacity=".65"/>
+    <line x1="248" y1="292" x2="312" y2="292" stroke-opacity=".35"/>
+    <!-- rocks -->
+    <circle cx="263" cy="260" r="3.6" stroke-opacity=".6"/>
+    <circle cx="278" cy="257" r="3.6" stroke-opacity=".6"/>
+    <circle cx="293" cy="260" r="3.6" stroke-opacity=".6"/>
+    <circle cx="270" cy="266" r="3.2" stroke-opacity=".5"/>
+    <circle cx="286" cy="266" r="3.2" stroke-opacity=".5"/>
+
+    <!-- barrel vent above stove -->
+    <ellipse cx="280" cy="178" rx="32" ry="9" stroke-opacity=".85"/>
+    <ellipse cx="280" cy="226" rx="32" ry="9" stroke-opacity=".85"/>
+    <line x1="248" y1="178" x2="248" y2="226" stroke-opacity=".7"/>
+    <line x1="257" y1="182" x2="257" y2="230" stroke-opacity=".4"/>
+    <line x1="269" y1="185" x2="269" y2="233" stroke-opacity=".4"/>
+    <line x1="291" y1="185" x2="291" y2="233" stroke-opacity=".4"/>
+    <line x1="303" y1="182" x2="303" y2="230" stroke-opacity=".4"/>
+    <line x1="312" y1="178" x2="312" y2="226" stroke-opacity=".7"/>
+    <line x1="252" y1="196" x2="248" y2="250" stroke-opacity=".55"/>
+    <line x1="308" y1="196" x2="312" y2="250" stroke-opacity=".55"/>
+
+    <!-- dimension: top width, two segments -->
+    <line x1="90" y1="52" x2="280" y2="52" stroke-opacity=".55" marker-start="url(#bpArrow)" marker-end="url(#bpArrow)"/>
+    <line x1="90" y1="46" x2="90" y2="58" stroke-opacity=".4"/>
+    <line x1="280" y1="46" x2="280" y2="58" stroke-opacity=".4"/>
+    <line x1="290" y1="52" x2="470" y2="52" stroke-opacity=".55" marker-start="url(#bpArrow)" marker-end="url(#bpArrow)"/>
+    <line x1="290" y1="46" x2="290" y2="58" stroke-opacity=".4"/>
+    <line x1="470" y1="46" x2="470" y2="58" stroke-opacity=".4"/>
+
+    <!-- dimension: right height -->
+    <line x1="494" y1="180" x2="494" y2="380" stroke-opacity=".55" marker-start="url(#bpArrow)" marker-end="url(#bpArrow)"/>
+    <line x1="488" y1="180" x2="500" y2="180" stroke-opacity=".4"/>
+    <line x1="488" y1="380" x2="500" y2="380" stroke-opacity=".4"/>
+
+    <!-- dimension: floor depth -->
+    <line x1="58" y1="380" x2="248" y2="480" stroke-opacity=".4" marker-start="url(#bpArrow)" marker-end="url(#bpArrow)"/>
+    <line x1="50" y1="374" x2="60" y2="386" stroke-opacity=".35"/>
+    <line x1="240" y1="474" x2="252" y2="486" stroke-opacity=".35"/>
+
+    <!-- dimension: bench depth -->
+    <line x1="76" y1="350" x2="76" y2="380" stroke-opacity=".45" marker-start="url(#bpArrow)" marker-end="url(#bpArrow)"/>
+    <line x1="70" y1="350" x2="82" y2="350" stroke-opacity=".35"/>
+    <line x1="70" y1="380" x2="82" y2="380" stroke-opacity=".35"/>
+  </svg>
+  <div class="container footer__grid reveal">
+    <div>
+      <a href="#top" class="logo"><span class="logo__mark"></span>LUMM<span class="logo__accent">INA</span></a>
+      <p>Строим бани, сауны, хаммамы и SPA-зоны так, будто топить их будем сами.</p>
+    </div>
+    <div>
+      <h4>Позвонить, написать</h4>
+      <a href="tel:+78121234567">+7 (812) 123-45-67</a>
+      <a href="mailto:privet@lummina.ru">privet@lummina.ru</a>
+      <p>Санкт-Петербург и Ленинградская область</p>
+    </div>
+    <div>
+      <h4>Разделы</h4>
+      <a href="#services">Что строим</a>
+      <a href="#projects">Работы</a>
+      <a href="#faq">Вопросы</a>
+    </div>
+    <div>
+      <h4>Мы тут</h4>
+      <a href="#">Telegram</a>
+      <a href="#">WhatsApp</a>
+      <a href="#">ВКонтакте</a>
+    </div>
+  </div>
+  <div class="container footer__bottom">
+    <span>© 2026 LUMMINA. Сделано руками, а не по шаблону.</span>
+    <button class="to-top" id="toTop" aria-label="Наверх"><i class="arrow arrow--up"></i></button>
+  </div>
+</footer>
+
+<!-- ===================== ПЛАВАЮЩАЯ КНОПКА ЗАЯВКИ ===================== -->
+<button class="fab-request js-open-modal" data-form="Заявка с плавающей кнопки" aria-label="Оставить заявку">
+  <span class="fab-request__pulse" aria-hidden="true"></span>
+  <span class="fab-request__icon" aria-hidden="true"></span>
+  <span class="fab-request__text">Оставить заявку</span>
+</button>
+
+<!-- ===================== МОДАЛКА ФОРМЫ ===================== -->
+<div class="modal" id="modal">
+  <div class="modal__box modal__box--wide">
+    <button class="modal__close" id="modalClose">&times;</button>
+    <h3 id="modalTitle">Оставить заявку</h3>
+    <p class="modal__hint">Заполните форму — вернёмся с ответом в течение часа в рабочее время. Обещаем не спамить.</p>
+    <form class="form form--wide" id="modalForm">
+      <input type="hidden" name="access_key" value="3740f5f4-133e-4b80-b970-5822f0e409a3">
+      <input type="hidden" name="subject" value="LUMMINA — новая заявка с сайта">
+      <input type="text" name="name" placeholder="Как к вам обращаться" required>
+      <input type="email" name="email" placeholder="Email" required>
+      <input type="tel" name="phone" placeholder="Телефон" required>
+      <input type="text" name="messenger" placeholder="Telegram или MAX — @username">
+      <textarea name="project" rows="3" placeholder="Опишите проект: что хотите построить, примерный масштаб, участок, бюджет"></textarea>
+      <button type="submit" class="btn btn--primary">Отправить заявку</button>
+    </form>
+    <p class="modal__note">Скоро подключим оплату и учёт заявок через Web3 — уже готовим интеграцию.</p>
+    <p class="form__success" id="formSuccess">Готово — вернёмся с ответом совсем скоро.</p>
+  </div>
+</div>
+
+<script src="js/main.js"></script>
+</body>
+</html>
